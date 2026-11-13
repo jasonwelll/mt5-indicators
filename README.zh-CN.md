@@ -11,10 +11,11 @@
 | `SuperTrend_Kivanc_MT5` | 1.11 | Kivanc 超级趋势 | [MPL 2.0](LICENSE-MPL-2.0.txt) |
 | `VWAP_Execution_MT5` | 1.01 | 会话 VWAP，可选偏离带 | MIT |
 | `IB_RTH_MT5` | 1.02 | 开盘区间，默认按纽约常规交易时段 | MIT |
+| `TPO_Session_MT5` | 1.06 | 会话 TPO 分布：字母、POC、价值区、单打印 | MIT |
 
-每个指标在图表右上角有一个 `Hide` / `Show` 按钮，可临时隐藏图形而不停止计算。按钮按加载顺序自动排开。参数在输入窗口的 `Chart visibility button (top right)` 分组里。
+SMC、成交量节点、SuperTrend、VWAP 和 IB 在图表右上角有一个 `Hide` / `Show` 按钮，可临时隐藏图形而不停止计算。按钮按加载顺序自动排开。参数在输入窗口的 `Chart visibility button (top right)` 分组里。`TPO_Session_MT5` 使用自己的 `Hide TPO` / `Show TPO` 控制，不参与这组统一按钮。更细的用法见 [TPO_Session.zh-CN.md](TPO_Session.zh-CN.md)。
 
-本仓库不包含 TPO，也不包含交易系统（EA）。
+本仓库不包含交易系统（EA）。
 
 ## 安装
 
@@ -36,7 +37,7 @@
 
 **`Visible_Range_Volume_Nodes_MT5`** 基于 [Crypto_Imperija 的 Visible Range Volume Nodes](https://www.tradingview.com/script/VoKAfPNW-Visible-Range-Volume-Nodes/)，按 **Mozilla Public License 2.0** 提供。
 
-**`VWAP_Execution_MT5`、`IB_RTH_MT5` 以及共用的 `Chart_Visibility.mqh`** 为独立实现，按 **MIT** 许可。
+**`VWAP_Execution_MT5`、`IB_RTH_MT5`、`TPO_Session_MT5` 以及共用的 `Chart_Visibility.mqh`** 为独立实现，按 **MIT** 许可。`TPO_Session_MT5` 会复用已有的 `VP_Nodes_Core.mqh` 分钟成交量分配器，该头文件仍按 **MPL 2.0** 提供，并保留 Crypto_Imperija 的原始署名。
 
 完整条文见仓库中的许可文件。软件按原样提供，不作任何担保。
 

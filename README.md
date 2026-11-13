@@ -11,10 +11,11 @@ Independent MetaTrader 5 chart indicators. These are not official products of an
 | `SuperTrend_Kivanc_MT5` | 1.11 | Kivanc Supertrend | [MPL 2.0](LICENSE-MPL-2.0.txt) |
 | `VWAP_Execution_MT5` | 1.01 | Session VWAP with optional deviation bands | MIT |
 | `IB_RTH_MT5` | 1.02 | Initial Balance, New York RTH by default | MIT |
+| `TPO_Session_MT5` | 1.06 | Session TPO profile: letters, POC, value area, and single prints | MIT |
 
-Each indicator has a top-right `Hide` / `Show` button that hides drawings without stopping calculation. Buttons stack automatically when several of these indicators are loaded. Related inputs are in the `Chart visibility button (top right)` group.
+SMC, volume nodes, SuperTrend, VWAP, and IB have a top-right `Hide` / `Show` button that hides drawings without stopping calculation. Buttons stack automatically when several of these indicators are loaded. Related inputs are in the `Chart visibility button (top right)` group. `TPO_Session_MT5` uses its own `Hide TPO` / `Show TPO` controls and does not join that shared stack. See [TPO_Session.zh-CN.md](TPO_Session.zh-CN.md) for the fuller TPO notes.
 
-This repository does not include TPO or any expert advisor.
+This repository does not include any expert advisor.
 
 [中文说明](README.zh-CN.md)
 
@@ -38,7 +39,7 @@ Files in this repository are not under a single license. Follow the license that
 
 **`Visible_Range_Volume_Nodes_MT5`** is based on [Crypto_Imperija's Visible Range Volume Nodes](https://www.tradingview.com/script/VoKAfPNW-Visible-Range-Volume-Nodes/) and is provided under the **Mozilla Public License 2.0**.
 
-**`VWAP_Execution_MT5`, `IB_RTH_MT5`, and the shared `Chart_Visibility.mqh` helper** are independent implementations under the **MIT License**.
+**`VWAP_Execution_MT5`, `IB_RTH_MT5`, `TPO_Session_MT5`, and the shared `Chart_Visibility.mqh` helper** are independent implementations under the **MIT License**. `TPO_Session_MT5` reuses the existing `VP_Nodes_Core.mqh` minute-volume allocator, which remains **MPL 2.0** and keeps the original Crypto_Imperija attribution.
 
 See the license files in this repository for the full terms. The software is provided as is, without warranty.
 
